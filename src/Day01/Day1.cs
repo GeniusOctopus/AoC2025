@@ -1,6 +1,6 @@
-namespace AoC2025.Day1;
+namespace AoC2025.Day01;
 
-public class Day1
+public class Day01
 {
     private const int InitialDialNumber = 50;
     private const int MinDialNumber = 0;
@@ -11,7 +11,7 @@ public class Day1
 
     public void Part1()
     {
-        var document = File.ReadAllLines("Day1/input.txt");
+        var document = File.ReadAllLines("Day01/input.txt");
 
         var dialNumber = InitialDialNumber;
         var countZeroVisited = 0;

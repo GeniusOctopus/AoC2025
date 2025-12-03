@@ -1,12 +1,12 @@
 using System.Numerics;
 
-namespace AoC2025.Day2;
+namespace AoC2025.Day02;
 
-public class Day2
+public class Day02
 {
     public void Part1()
     {
-        var idRanges = File.ReadAllText("Day2/input.txt").Split(',').Select(x => new { firstId = x.Split('-')[0], lastId = x.Split('-')[1] });
+        var idRanges = File.ReadAllText("Day02/input.txt").Split(',').Select(x => new { firstId = x.Split('-')[0], lastId = x.Split('-')[1] });
         // Don't know if the sum could be bigger than ulong.MaxValue, so jsut use BigInteger
         BigInteger sumOfInvalidIds = 0;
 

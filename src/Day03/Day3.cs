@@ -1,12 +1,12 @@
 using System.Numerics;
 
-namespace AoC2025.Day3;
+namespace AoC2025.Day03;
 
-public class Day3
+public class Day03
 {
     public void Part1And2(int batteryCount)
     {
-        var batteryBanks = File.ReadAllLines("Day3/input.txt").Select(x => x.ToCharArray().Select(y => int.Parse(y.ToString())).ToList());
+        var batteryBanks = File.ReadAllLines("Day03/input.txt").Select(x => x.ToCharArray().Select(y => int.Parse(y.ToString())).ToList());
         BigInteger totalJoltageOutput = 0;
 
         foreach (var batteryBank in batteryBanks)

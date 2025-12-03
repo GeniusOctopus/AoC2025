@@ -1,10 +1,12 @@
-﻿using AoC2025.Day1;
-using AoC2025.Day2;
-using AoC2025.Day3;
+﻿using AoC2025.Day01;
+using AoC2025.Day02;
+using AoC2025.Day03;
+using AoC2025.Day04;
 
-// new Day1().Part1();
-// new Day1().Part2();
-// new Day2().Part1();
-// new Day2().Part2();
-new Day3().Part1And2(2);
-new Day3().Part1And2(12);
+// new Day01().Part1();
+// new Day01().Part2();
+// new Day02().Part1();
+// new Day02().Part2();
+// new Day03().Part1And2(2);
+// new Day03().Part1And2(12);
+new Day04().Part1();
