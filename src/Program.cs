@@ -10,3 +10,4 @@ using AoC2025.Day04;
 // new Day03().Part1And2(2);
 // new Day03().Part1And2(12);
 new Day04().Part1();
+new Day04().Part2();
