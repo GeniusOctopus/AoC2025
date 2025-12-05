@@ -11,9 +11,7 @@ public class Day05
         var ids = input.Where(x => ulong.TryParse(x, out ulong id)).Select(x => ulong.Parse(x));
         ulong sum = 0;
 
-        foreach (var id in ids)
-            if (ranges.Any(x => id <= x.UpperBound && id >= x.LowerBound))
-                sum++;
+        sum = ids.Aggregate(0UL, (acc, n) => acc += ranges.Any(x => n <= x.UpperBound && n >= x.LowerBound) ? 1UL : 0UL);
 
         Console.WriteLine(sum);
     }

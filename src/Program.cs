@@ -3,6 +3,7 @@ using AoC2025.Day02;
 using AoC2025.Day03;
 using AoC2025.Day04;
 using AoC2025.Day05;
+using AoC2025.Day06;
 
 // new Day01().Part1();
 // new Day01().Part2();
@@ -12,5 +13,7 @@ using AoC2025.Day05;
 // new Day03().Part1And2(12);
 // new Day04().Part1();
 // new Day04().Part2();
-new Day05().Part1();
-new Day05().Part2();
+// new Day05().Part1();
+// new Day05().Part2();
+new Day06().Part1();
+new Day06().Part2();
