@@ -15,5 +15,5 @@ using AoC2025.Day06;
 // new Day04().Part2();
 // new Day05().Part1();
 // new Day05().Part2();
-new Day06().Part1();
+// new Day06().Part1();
 new Day06().Part2();
