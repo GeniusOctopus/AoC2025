@@ -4,6 +4,8 @@ using AoC2025.Day03;
 using AoC2025.Day04;
 using AoC2025.Day05;
 using AoC2025.Day06;
+using AoC2025.Day07;
+using AoC2025.Day08;
 
 // new Day01().Part1();
 // new Day01().Part2();
@@ -16,4 +18,8 @@ using AoC2025.Day06;
 // new Day05().Part1();
 // new Day05().Part2();
 // new Day06().Part1();
-new Day06().Part2();
+// new Day06().Part2();
+// new Day07().Part1();
+// new Day07().Part2();
+new Day08().Part1And2(1000);
+new Day08().Part1And2(int.MaxValue);
