@@ -35,9 +35,13 @@ public class Day09
             }
         }
 
+        var crossingLines = areas.OrderByDescending(x => x.Key.Item1.Y == x.Key.Item2.Y).ThenByDescending(x => Math.Abs(x.Key.Item1.X - x.Key.Item2.X)).Select(x => x.Key.Item1.Y).Take(2).ToList();
+        var lowerBound = crossingLines.OrderByDescending(x => x).First();
+        var upperBound = crossingLines.OrderBy(x => x).First();
+
         foreach (var area in areas)
         {
-            if (IsRectInPolygon(area.Key, polygon))
+            if (IsRectInPolygon(area.Key, polygon, lowerBound, upperBound))
             {
                 possibleAreas.Add(area.Key, area.Value);
             }
@@ -47,7 +51,7 @@ public class Day09
         Console.WriteLine(possibleAreas.First().Value);
     }
 
-    private bool IsRectInPolygon((Point, Point) rect, List<Point> polygon)
+    private bool IsRectInPolygon((Point, Point) rect, List<Point> polygon, int lowerBound, int upperBound)
     {
         var checkP1 = new Point(rect.Item1.X, rect.Item2.Y);
         if (!IsPointInPolygon(checkP1, polygon))
@@ -61,8 +65,9 @@ public class Day09
             return false;
         }
 
-        // Only working for my input, but I was faster with getting the answer with this quick and dirty approach; sorry not sorry
-        if (!(Math.Min(rect.Item1.Y, rect.Item2.Y) >= 50187 && Math.Max(rect.Item1.Y, rect.Item2.Y) >= 50187 || Math.Min(rect.Item1.Y, rect.Item2.Y) <= 48595 && Math.Max(rect.Item1.Y, rect.Item2.Y) <= 48595))
+        // Using the topology of the input, which seems to always contain two edges, that almost separate the polygon
+        if (!(Math.Min(rect.Item1.Y, rect.Item2.Y) >= lowerBound && Math.Max(rect.Item1.Y, rect.Item2.Y) >= lowerBound
+            || Math.Min(rect.Item1.Y, rect.Item2.Y) <= upperBound && Math.Max(rect.Item1.Y, rect.Item2.Y) <= upperBound))
         {
             return false;
         }

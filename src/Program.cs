@@ -1,4 +1,5 @@
-﻿using AoC2025.Day01;
+﻿using System.Diagnostics;
+using AoC2025.Day01;
 using AoC2025.Day02;
 using AoC2025.Day03;
 using AoC2025.Day04;
@@ -25,4 +26,8 @@ using AoC2025.Day09;
 // new Day08().Part1And2(1000);
 // new Day08().Part1And2(int.MaxValue);
 // new Day09().Part1();
+var sw = new Stopwatch();
+sw.Start();
 new Day09().Part2();
+sw.Stop();
+Console.WriteLine($"elapsed ms: {sw.ElapsedMilliseconds}");
