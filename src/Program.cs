@@ -8,6 +8,7 @@ using AoC2025.Day06;
 using AoC2025.Day07;
 using AoC2025.Day08;
 using AoC2025.Day09;
+using AoC2025.Day10;
 
 // new Day01().Part1();
 // new Day01().Part2();
@@ -26,8 +27,5 @@ using AoC2025.Day09;
 // new Day08().Part1And2(1000);
 // new Day08().Part1And2(int.MaxValue);
 // new Day09().Part1();
-var sw = new Stopwatch();
-sw.Start();
-new Day09().Part2();
-sw.Stop();
-Console.WriteLine($"elapsed ms: {sw.ElapsedMilliseconds}");
+// new Day09().Part2();
+new Day10().Part1();
