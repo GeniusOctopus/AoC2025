@@ -28,4 +28,5 @@ using AoC2025.Day10;
 // new Day08().Part1And2(int.MaxValue);
 // new Day09().Part1();
 // new Day09().Part2();
-new Day10().Part1();
+// new Day10().Part1();
+new Day10().Part2();
