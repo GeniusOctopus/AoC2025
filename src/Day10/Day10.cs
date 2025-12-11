@@ -159,6 +159,7 @@ public class Day10
 
             if (Math.Abs(erwKoeffizientenMatrix[zeile, j]) < PrecisionTolerance) continue;
 
+            // Zeilen vertauschen
             if (zeile != idx)
             {
                 for (int k = 0; k <= spalten; k++)
