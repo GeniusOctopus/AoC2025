@@ -36,7 +36,7 @@ public class Day01
 
     public void Part2()
     {
-        var document = File.ReadAllLines("Day1/input.txt");
+        var document = File.ReadAllLines("Day01/input.txt");
 
         var dialNumber = InitialDialNumber;
         var countZeroVisited = 0;

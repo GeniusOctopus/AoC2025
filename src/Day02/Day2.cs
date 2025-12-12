@@ -44,7 +44,7 @@ public class Day02
 
     public void Part2()
     {
-        var idRanges = File.ReadAllText("Day2/input.txt").Split(',').Select(x => new { firstId = x.Split('-')[0], lastId = x.Split('-')[1] });
+        var idRanges = File.ReadAllText("Day02/input.txt").Split(',').Select(x => new { firstId = x.Split('-')[0], lastId = x.Split('-')[1] });
         BigInteger sumOfInvaidIds = 0;
 
         foreach (var idRange in idRanges)
